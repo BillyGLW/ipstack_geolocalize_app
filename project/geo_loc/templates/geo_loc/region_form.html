@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+	<div class="geo-loc-form_2">
+	<b>Update view</b> for <b>{{ object }}</b> no. <b> {{ object.id }} </b> 
+		<form method="post">{% csrf_token %}
+			{{ form.as_p }}
+    		<input type="submit" class="btn-sucess" style="width: 50%; left: 20%; position: relative; margin-top: 5px;" value="Confirm">
+		</form>
+	</div>
+</section>
+
+{% endblock %}

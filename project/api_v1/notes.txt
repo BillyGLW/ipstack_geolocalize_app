@@ -1,0 +1,14 @@
+curl -X get --user zyhu:lol123 http://localhost:8000/geoloc/api/v1/get/49/
+
+
+
+
+{
+	'ip': 'abcd',
+	'protocol': 'ipv5',
+	'region': {'city': 'hellolka', 'country_name': 'anzing'}
+	'user': {'username': 'zyhu'}
+}
+
+
+{'ip':'abcd','protocol':'ipv5','region':{'city':'hellolka','country_name':'anzing'}'user':{'username':'zyhu'}}

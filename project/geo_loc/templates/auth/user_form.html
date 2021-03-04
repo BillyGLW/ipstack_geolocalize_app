@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+	<div class="geo-loc-form_2">
+		<b> Register now! </b><br>
+		<form method="post" action="{% url 'geoloc:geo-loc-c_view' %}">{% csrf_token %}
+		    {{ form.as_p }}
+		<input type="submit" class="btn-sucess" style="width: 50%; left: 20%; position: relative; margin-top: 5px;" value="Save">
+	</form>
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,4 @@
+/scripts
+*.bat
+/_env
+*remove*

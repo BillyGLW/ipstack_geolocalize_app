@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<section>
+
+<h1> Logged as: {{ request.user }}</h1>
+</section>
+
+<div class="geo-loc-div-tbl-1">
+
+<table class="geo-loc-tbl-1 table table-borderless table-hover" style="background-color: rgba(0,0,110, 0.1);">
+	<thead>
+		<tr>
+			<th scope="col">IP</th>
+			<th scope="col">Protocol</th>
+			<th scope="col">Continent name</th>
+			<th scope="col">Continent code</th>
+			<th scope="col">Country name</th>
+			<th scope="col">Country code</th>
+			<th scope="col">City</th>
+			<th scope="col">Zip</th>
+			<th scope="col">Operation</th>
+		</tr>
+	</thead>
+	{% for obj in object_list %}
+	<tr>
+		<td> {{ obj.ip }} </td>
+		<td> {{ obj.protocol }} </td>
+		<td> {{ obj.region.continent_name }} </td>
+		<td> {{ obj.region.continent_code }} </td>
+		<td> {{ obj.region.country_name }} </td>
+		<td> {{ obj.region.country_code }} </td>
+		<td> {{ obj.region.city }} </td>
+		<td> {{ obj.region.zip_number }} </td>
+		<td>  
+			<a href="{% url 'geoloc:geo-loc-update_view' obj.region.id %}"> <input type="button" value="U" class="btn-neutral">  </a> 
+			<form method="POST" action="{% url 'geoloc:geo-loc-delete_view' obj.id %}">
+				{% csrf_token %}
+				<input class="btn-alert" type="submit" value="D">
+			</form>  
+		</td>
+	</tr>
+{% empty %}
+	<br>
+	<tr>
+		<td colspan="6">no items</td>
+	</tr>
+{% endfor %}
+</tbody>
+</table>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+</div>
+
+</div>
+<div class="geo-loc-form_1" style="padding: 20px; text-align: center; color: white;"> 
+	<p>IP Geolocation </p>
+
+	<form method="post" action=" {% url 'geoloc:geo-loc-lu_view' %}">{% csrf_token %}
+		<input style="padding: 10px; background-color: rgba(11,155,15, 0.5)" type="text" class="btn-sucess" name="geo_ip" value="{{ geo_ip_lookup }}">
+		<input style="background-color: rgba(11,155,15, 0.5)" type="submit" class="btn-sucess" value="Look up">
+	</form>
+
+</div>
+
+
+
+{% endblock %}
+
+

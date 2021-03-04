@@ -1,0 +1,146 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
+  font-family: "Lato"
+}
+
+section{
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E63C73, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
+h1{
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 10rem;
+}
+
+.geo-loc-form_1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 0.2px solid #fff;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 10rem;
+}
+
+.geo-loc-form_2{
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 0.2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 10rem;
+}
+tr th{
+  border: 0.2px solid #fff;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 5rem 10rem;
+}
+tr td{
+    border: 0.2px solid #fff;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 5rem 10rem;
+}
+
+.geo-loc-tbl-1{
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /*border: 1px solid #000;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 10rem;
+}
+
+.pagination{
+  position: absolute;
+  font-size: 1.4rem;
+  border: 0.2px solid #fff;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 10rem;
+}
+
+.btn-sucess {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-neutral {
+  background-color: #0099ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-alert {
+  background-color: #ff5050;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+
+  }
+  50%{
+      background-position: 100% 50%;
+      
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
