@@ -115,7 +115,7 @@ Referrer-Policy: same-origin
 
 # Setup
 
--Docker/Windows
+## Docker/Windows
 Configured to run with docker - but running locally or on heroku requires minor changes in settings.py. Run command below from '\sofomo_rekrutacja\':
 ```
 docker-compose -f docker-compose.prod.yml build
@@ -123,7 +123,7 @@ docker-compose down && docker-compose up
 ```
 Now container is running, check it out at http://localhost:1337.
 
--Docker/Ubuntu tested on(18.04.4 LTS)
+## Docker/Ubuntu tested on(18.04.4 LTS)
 Configured to run with docker - but running locally or on heroku requires minor changes in settings.py. Run command below from '\sofomo_rekrutacja\':
 fetch unix branch
 ```
