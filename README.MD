@@ -125,26 +125,27 @@ Now container is running, check it out at http://localhost:1337.
 
 ## Docker/Ubuntu tested on(18.04.4 LTS)
 Configured to run with docker - but running locally or on heroku requires minor changes in settings.py. Run command below from '\sofomo_rekrutacja\':
-fetch unix branch
+
+-fetch unix branch
 ```
 git init
 git remote add origin https://github.com/BillyGLW/ipstack_geolocalize_app.git
 git fetch --all
 git checkout unix
 ```
-build and run with docker-compose:
+-build and run with docker-compose:
 ```
 docker-compose build
 docker-compose down && docker-compose up
 ```
 
-Entering into docker container (same folder as in previous step):
+-Entering into docker container (same folder as in previous step):
 ```
 docker-compose exec web /bin/sh
 ```
 
 -Locally
-Comment out docker or heroku options. Analogically uncomment local options in settings.py.
+-Comment out docker or heroku options. Analogically uncomment local options in settings.py.
 ```
 python manage.py test && python manage.py runserver
 ``` 
