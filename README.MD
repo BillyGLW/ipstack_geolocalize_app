@@ -144,7 +144,7 @@ docker-compose down && docker-compose up
 docker-compose exec web /bin/sh
 ```
 
--Locally
+## Locally
 -Comment out docker or heroku options. Analogically uncomment local options in settings.py.
 ```
 python manage.py test && python manage.py runserver
