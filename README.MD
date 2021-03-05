@@ -1,7 +1,8 @@
 # Description
 Application is designed to gather specyfic informations about geographic localizations from given (as input by user) ip or domain.
 Once user is logged in, system gives an access to variety areas of implemented functionalities. Thus it is possible to check given ip/url with using web browser (registration process must be done here!), but due to logically use of an app its highly preferable to use rest-api (so that it could be use as more flexible api). 
-
+Hosted on heroku:
+https://hidden-castle-42484.herokuapp.com
 ## Tech stack
 Application guarantees fully working JWT, session and basic authentications which is handled by django framework (3.1.6). Application stands on gunicron server with nginx as a reverse proxy. Rest-api is done with an use of default rest-framework in version 3.12.2 and geolocalization is provided by authored API (which is an wrapper for ipstack.com python api). Locally for testing purposes - its using sqlite database - in "production" release it consists on postresql (Docker/Heroku).
 
